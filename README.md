@@ -31,7 +31,7 @@ layer convolutional module that predicts an inverse attention mask A⁻¹ highli
 background regions. Formally, if F is the upsampled feature map (after the decoder), the IAB
 outputs an element-wise mask A⁻¹ of the same spatial size. We then compute a refined map
 
-                                                 F′ = F − F ⊙ A⁻¹
+                                            F′ = F − F ⊙ A⁻¹
 
 where ⊙ denotes elementwise multiplication. Intuitively, this subtracts out features
 associated with background, forcing the network to focus on crowd areas (inspired by IA-
