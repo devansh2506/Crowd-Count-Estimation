@@ -15,7 +15,7 @@ Regression model that treats counting as whole-image regression with two heads (
 segmentation awareness with Transformer-based global context reasoning.
 
 
-VUI-CrowdNet:
+## VUI-CrowdNet
 
 We build VUI-CrowdNet on a VGG-16 encoder (pretrained on ImageNet). An
 input image (768×1024×3) is fed through VGG-16 up to the fifth pooling layer, producing
@@ -31,14 +31,14 @@ layer convolutional module that predicts an inverse attention mask A⁻¹ highli
 background regions. Formally, if F is the upsampled feature map (after the decoder), the IAB
 outputs an element-wise mask A⁻¹ of the same spatial size. We then compute a refined map
 
-F′ = F − F ⊙ A⁻¹
+                                                 F′ = F − F ⊙ A⁻¹
 
 where ⊙ denotes elementwise multiplication. Intuitively, this subtracts out features
 associated with background, forcing the network to focus on crowd areas (inspired by IA-
 DCCN). This inversion scheme is key to making the counting easier by dimming non-crowd
 regions. Finally, we pass F through a 1x1 Convolution to produce the predicted density map.
 
-Vission Transformer Regression:
+## Vission Transformer Regression
 
 Our transformer-based model treats crowd counting as a global image
 regression problem. We resize inputs to 384×384 and split each image into non-overlapping
@@ -60,7 +60,7 @@ consistently outperformed GAP , suggesting the ViT can effectively learn a dedic
 token.
 
 
-Results:
+## Results
 
 On the given dataset, our best VUI-CrowdNet model achieved MAE ≈16.7. This is a competitive
 result: it improves upon many classical methods (e.g. Switching-CNN’s MAE 21.6) and
