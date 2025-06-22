@@ -37,6 +37,8 @@ where ⊙ denotes elementwise multiplication. Intuitively, this subtracts out fe
 associated with background, forcing the network to focus on crowd areas (inspired by IA-
 DCCN). This inversion scheme is key to making the counting easier by dimming non-crowd
 regions. Finally, we pass F through a 1x1 Convolution to produce the predicted density map.
+![image-4 - Edited](https://github.com/user-attachments/assets/0ae8019e-0120-4c52-98d6-f02a3db078b6)
+
 
 ## Vission Transformer Regression
 
@@ -58,6 +60,8 @@ head aims to concentrate count evidence into one feature, while the GAP head agg
 information from the entire scene. In our experiments (see Results) the token head
 consistently outperformed GAP , suggesting the ViT can effectively learn a dedicated count
 token.
+
+![Screenshot 2025-06-22 at 1 19 52 PM](https://github.com/user-attachments/assets/24f18888-8e69-4511-ad25-7382f735244b)
 
 
 ## Results
