@@ -88,3 +88,7 @@ dataset size limited how far we could optimize each model: given more training e
 compute, both models could likely improve further. Nevertheless, the results clearly show
 that injecting segmentation awareness into a CNN and leveraging self-attention in a
 transformer are both effective strategies for crowd counting.
+
+
+### Note
+The notebooks VUI-CrowdNet Dense.ipynb, multi-column.ipynb, and single col.ipynb show the early experiments and the challenges we faced. The final improved models are in VUI_CrowdNet.ipynb and transformer_based_regression.ipynb, which include the best results after many improvements.
